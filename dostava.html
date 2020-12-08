@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/forma.js"></script>
+        <link rel="icon" href="../Poslastičarnica Bobica/images/maliLogo.png">
+
+        <title>Poslastičarnica Bobica</title>
+    </head>
+<body>
+    <header>
+        <div class="gore">
+            <ul class="main-gore">
+                <li ><a href="pocetna.html">Početna</a></li>
+                <li><a href="onama.html">O nama</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li class="active "><a href="dostava.html">Dostava</a></li>
+                <li id="glogo"><img class="glogoimg" height="55px" src="images/logo.png" alt=""></li>
+            </ul>
+        </div>
+    </header>
+        <div class="center">
+            <h2 id="poruci">Poruči</h2>
+
+            <p>Poštovani molimo Vas da unesete sve podatke<br>
+                kako biste uspešno poručili vaš sladak užitak. <br>
+            </p>
+            <br>
+            <form name="myForm">
+                Ime i prezime: <input type="text" id="ime" name="ime" placeholder="Ime i prezime"/><br>
+                Broj telefona: <input type="number" id="telefon" name="telefon" placeholder="Broj telefona"/><br>
+                <div id="tele">
+                    <img id="tel" src="images/poruci.jpg" height="100px" alt="telefon"/>
+                </div>
+                E-mail: <input type="email" id="mail" name="mail" placeholder="E-Mail"/><br>
+                Adresa: <input type="text" id="adresa" name="adresa" placeholder="Adresa"/><br>
+               
+                <br>
+                Odaberite slatkiš: <br>
+                 <select name="torte" id="birajt">
+                    <option value="Biram tortu">Biram tortu</option>
+                    <option value="Doboš">Doboš</option>
+                    <option value="Čoko malina">Čoko malina</option>
+                    <option value="Moskva">Moskva</option>
+                    <option value="Kinder">Kinder</option>
+                    <option value="Nugat">Nugat</option>
+                    <option value="Saher">Saher</option>
+                </select>
+                <select name="krofne" id="birajk">
+                    <option value="Biram krofnu">Biram krofnu</option>
+                    <option value="Jagoda">Jagoda</option>
+                    <option value="Malina">Malina</option>
+                    <option value="Borovnica">Borovnica</option>
+                    <option value="Rafaelo">Rafaelo</option>
+                    <option value="Višnja">Višnja</option>
+                    <option value="Čokolada">Čokolada</option>
+                    <option value="Unicorn">Unicorn</option>
+                </select>
+                <select name="bombone" id="birajb">
+                    <option value="Biram bombone">Biram bombone</option>
+                    <option value="Gumene">Gumene</option>
+                    <option value="Svilene">Svilene</option>
+                    <option value="Mekane">Mekane</option>
+                    <option value="Penaste">Penaste</option>
+                </select>
+                 <br>
+                Odaberite boju za dizajn Vašeg slatkiša: <input type="color" > <br>
+                Za koji dan želite da poručite:  <input class="date" type="date">
+                <br>
+                <input type="reset" value="Poništi odgovor" />
+                <br>
+            </form>
+            <br>
+            <br>
+            <div id="dugmici">
+                <button id="spec">Pogledaj specijalitet meseca</button> <div id="spec_">   Ferrero Rocher krofna</div> <br>
+                <button onclick="proveri()">Proveri svoje podatke</button> <br>
+                <div id="podaci">
+                    <p id="pime">Ime: </p> <input type="text" id="pimee">
+                    <p id="ptele">Broj telefona: </p> <input type="text" id="ptelee">
+                    <p id="pmejl">E-mail: </p><input type="text" id="pmejle">
+                    <p id="padresa">Adresa: </p><input type="text" id="padresae">
+                </div>
+                <button onclick="validacija()">Poruči</button>
+            </div>
+            <br>
+            <br>
+        </div>
+</body>
+<script>
+    $(function () {
+      $(".date").datepicker();
+    });
+</script>
+
+
+
+</html>
