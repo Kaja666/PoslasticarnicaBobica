@@ -41,7 +41,7 @@
                 Adresa: <input type="text" id="adresa" name="adresa" placeholder="Adresa"/><br>
                
                 <br>
-                Odaberite slatkiš: <br>
+                Odaberite slatkiš (možete odabrati 1 slatkiš po porudžbini): <br>
                  <select name="torte" id="birajt">
                     <option value="Biram tortu">Biram tortu</option>
                     <option value="Doboš">Doboš</option>
@@ -70,7 +70,7 @@
                 </select>
                  <br>
                 Odaberite boju za dizajn Vašeg slatkiša: <input type="color" > <br>
-                Za koji dan želite da poručite:  <input class="date" type="date">
+                Za koji dan želite da poručite:  <input class="date" id="datum" type="date">
                 <br>
                 <input type="reset" value="Poništi odgovor" />
                 <br>
@@ -85,6 +85,7 @@
                     <p id="ptele">Broj telefona: </p> <input type="text" id="ptelee">
                     <p id="pmejl">E-mail: </p><input type="text" id="pmejle">
                     <p id="padresa">Adresa: </p><input type="text" id="padresae">
+                    <p id="pslatko">Poručili ste: </p> <p id="pslatkoe"><br></p> <p id="nisiBirao">Niste odabrali slatkiš, molimo Vas odaberite</p>
                 </div>
                 <button onclick="validacija()">Poruči</button>
             </div>

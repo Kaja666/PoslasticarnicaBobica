@@ -41,6 +41,7 @@ li {
 .glogoimg{
     border-radius: 10px;
 }
+/* Kada se misem predje preko malog loga */
 .glogoimg:hover{
     height: 57px;
 }

@@ -16,7 +16,7 @@ function validacija() {
 
   if(document.forms[0].mail.value.indexOf('@') == -1)
   {
-    alert("Niste uneli e-mail adresu u odgovarajucem formatu!");
+    alert("Niste uneli e-mail adresu u odgovarajucem formatu! (mora sadrzati @)");
     document.forms[0].mail.focus();
     return false;
   }
@@ -38,9 +38,31 @@ function validacija() {
     document.forms[0].telefon.focus();
     return false;
   }
-    
-  return confirm("Da li želite da završite sa poručivanjem?");
+      
+  /*if (document.forms[0].datum.value.before) {
+    alert("Niste uneli Vas broj telefona!");
+    document.forms[0].telefon.focus();
+    return false;
+  }  */
+
+  /*var GivenDate = $("#datum").datepicker("getDate");
+  var CurrentDate = new Date();
+  GivenDate = new Date(GivenDate);
+
+  if(GivenDate > CurrentDate){
+    alert('Given date is greater than the current date.');
+  }else{
+    alert('Given date is not greater than the current date.');
+  }*/
+
+  $(function() { 
+    $( "#datum" ).datepicker({ minDate: new Date() }); 
+  });
+
+  confirm("Da li želite da završite sa poručivanjem?");
+  alert("Uspešno ste poručili Vaš slatkiš! Želimo Vam sladak ostatak dana! :)");
 }
+
 
 /* Proveri podatke, prvo su skriveni pa se posle kopira sadrzaj iz poja u formi */
 
@@ -65,6 +87,26 @@ function proveri() {
     $("#padresae").show();
     document.getElementById("padresae").value = document.getElementById("adresa").value;
   })
+  $(document).ready(function(){
+    $("#pslatko").show();
+    $("#pslatkoe").show();
+    if (document.forms[0].birajt.value!='Biram tortu') {
+      document.getElementById("pslatkoe").innerHTML = document.getElementById("birajt").value;
+      $("#nisiBirao").hide();
+    }
+    else if (document.forms[0].birajk.value!='Biram krofnu') {
+      document.getElementById("pslatkoe").innerHTML = document.getElementById("birajk").value;
+      $("#nisiBirao").hide();
+    } 
+    else if (document.forms[0].birajb.value!='Biram bombone') {
+      document.getElementById("pslatkoe").innerHTML = document.getElementById("birajb").value;
+      $("#nisiBirao").hide();
+    }
+    else{
+      $("#pslatko").hide();
+      $("#nisiBirao").show();
+    }
+  })
 }
 
 $(document).ready(function(){
@@ -76,6 +118,9 @@ $(document).ready(function(){
   $("#ptelee").hide();
   $("#pmejle").hide();
   $("#padresae").hide();
+  $("#pslatko").hide();
+  $("#pslatkoe").hide();
+  $("#nisiBirao").hide();
 });
 
 

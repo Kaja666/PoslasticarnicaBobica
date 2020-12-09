@@ -1,4 +1,4 @@
-/* Za otvaranje ukusa torti, krofni i bombona */
+/* Za otvaranje ukusa torti, krofni i bombona, JQUERY */
 $(document).ready(function(){
     $("#torte").click(function(){
       $("#torte_ukusi").slideToggle("slow");
@@ -10,6 +10,7 @@ $(document).ready(function(){
       $("#krofne_ukusi").slideToggle("slow");
     });
   });
+  
   $(document).ready(function(){
     $("#bombone").click(function(){
       $("#bombone_ukusi").slideToggle("slow");
