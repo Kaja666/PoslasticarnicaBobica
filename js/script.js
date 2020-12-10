@@ -10,7 +10,7 @@ $(document).ready(function(){
       $("#krofne_ukusi").slideToggle("slow");
     });
   });
-  
+
   $(document).ready(function(){
     $("#bombone").click(function(){
       $("#bombone_ukusi").slideToggle("slow");
@@ -19,7 +19,6 @@ $(document).ready(function(){
 
 /*slideshow na pocetnoj stranici*/
 var slideIndex = 0;
-showSlides();
 
 function showSlides() {
   var i;
@@ -37,3 +36,4 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 3000); // Menja sliku svake 2 sekunde
 }
+showSlides();

@@ -33,31 +33,11 @@ function validacija() {
     return false;
   }
       
-  if (document.forms[0].telefon.value=='') {
-    alert("Niste uneli Vas broj telefona!");
-    document.forms[0].telefon.focus();
+  if (document.forms[0].torte.value=='Biram tortu' || document.forms[0].krofne.value=='Biram krofnu' || document.forms[0].bombone.value=='Biram bombone') {
+    alert("Niste uneli odabrali slatkiš!");
+    document.forms[0].torte.focus();
     return false;
   }
-      
-  /*if (document.forms[0].datum.value.before) {
-    alert("Niste uneli Vas broj telefona!");
-    document.forms[0].telefon.focus();
-    return false;
-  }  */
-
-  /*var GivenDate = $("#datum").datepicker("getDate");
-  var CurrentDate = new Date();
-  GivenDate = new Date(GivenDate);
-
-  if(GivenDate > CurrentDate){
-    alert('Given date is greater than the current date.');
-  }else{
-    alert('Given date is not greater than the current date.');
-  }*/
-
-  $(function() { 
-    $( "#datum" ).datepicker({ minDate: new Date() }); 
-  });
 
   confirm("Da li želite da završite sa poručivanjem?");
   alert("Uspešno ste poručili Vaš slatkiš! Želimo Vam sladak ostatak dana! :)");
